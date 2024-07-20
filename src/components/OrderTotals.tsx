@@ -11,7 +11,7 @@ interface OrderTotalsProps {
 const OrderTotals = ({ order, tip, placeOrder }: OrderTotalsProps) => {
   const subtotalAmount = useMemo(
     () => order.reduce((total, item) => total + item.quantity * item.price, 0),
-    [order]
+    [order],
   );
 
   const tipAmount = useMemo(() => subtotalAmount * tip, [tip, order]);

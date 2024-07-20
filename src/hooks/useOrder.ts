@@ -12,7 +12,7 @@ const useOrder = () => {
       const updatedOrder = order.map((orderItem) =>
         orderItem.id === item.id
           ? { ...orderItem, quantity: orderItem.quantity + 1 }
-          : orderItem
+          : orderItem,
       );
       setOrder(updatedOrder);
     } else {
